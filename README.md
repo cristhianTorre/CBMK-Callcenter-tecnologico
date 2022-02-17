@@ -8,3 +8,4 @@ IETI
 * Cristhian Torres
 * Kevin Garzon
 * Brayan Jiménez
+* Cristian Piñeros
