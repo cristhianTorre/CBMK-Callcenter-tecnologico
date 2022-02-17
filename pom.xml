@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.escuelaing.ieti</groupId>
-	<artifactId>cbmk-callcentertecnol-gico</artifactId>
+	<artifactId>cbmk-callcentertecnologico</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cbmk-callcentertecnol-gico</name>
+	<name>cbmk-callcentertecnologico</name>
 	<description>IETI project</description>
 	<properties>
 		<java.version>1.8</java.version>
