@@ -1,4 +1,4 @@
-package edu.escuelaing.ieti.cbmk.callcentertecnologico.repository;
+package edu.escuelaing.ieti.cbmk.callcentertecnologico.Repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import edu.escuelaing.ieti.cbmk.callcentertecnologico.model.Tecnico;
