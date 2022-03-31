@@ -59,15 +59,21 @@ public class Tecnico {
         this.email = email;
     }
 
-    public String getSkilList() {
-        return skill;
-    }
+    
 
-    public void setSkilList(List<String> skilList) {
-        this.skill = skill;
-    }
+    public String getSkill() {
+		return skill;
+	}
 
-    public String getActivate() {return activate;}
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
+
+	public void setScore(Integer score) {
+		this.score = score;
+	}
+
+	public String getActivate() {return activate;}
 
     public void setActivate(String activate) {this.activate = activate;}
 

@@ -13,24 +13,24 @@ public class Taskimpl implements Task {
 	
 	@Autowired
     private taskRepository taskRepository;
-	/*private TecnicoService TecnicoService;*/
+	private TecnicoService TecnicoService;
 
 	@Override
 	public TaskModel createTask(TaskModel task) {
-		/*String eleccionTecnico = escogerTecnico(task);*/
-		/*task.setTecnicoId(eleccionTecnico);*/
+		String eleccionTecnico = escogerTecnico(task);
+		task.setTecnicoId(eleccionTecnico);
 		return taskRepository.save(task);
 	}
 
-	/*private String escogerTecnico(TaskModel task) {
+	private String escogerTecnico(TaskModel task) {
 		List<Tecnico> tecnicos = TecnicoService.findAll();
 		for (Tecnico tecnico : tecnicos) {
-			if (tecnico.getSkill() = task.getSkill() && tecnico.getActivate().equals("A")) {
+			if (tecnico.getSkill() == task.getSkill() && tecnico.getActivate().equals("A")) {
 				return tecnico.getId();
 			}
-			
-		}	
-	}*/
+		}
+		return null;	
+	}
 
 	@Override
 	public List<TaskModel> AllTask() {
