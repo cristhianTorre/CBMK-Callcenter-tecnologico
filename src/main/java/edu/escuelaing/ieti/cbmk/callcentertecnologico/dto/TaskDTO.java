@@ -3,11 +3,13 @@ package edu.escuelaing.ieti.cbmk.callcentertecnologico.dto;
 import java.sql.Date;
 
 public class TaskDTO {
+	private String tecnicoId;
 	private String id;
 	private String iduser;
 	private String email;
     private String comentario;
     private Date fechaCreacion;
+    private String skill;
     
     
     
@@ -22,6 +24,14 @@ public class TaskDTO {
 		return iduser;
 	}
 	
+	
+	
+	public String getSkill() {
+		return skill;
+	}
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
 	public void setIduser(String iduser) {
 		this.iduser = iduser;
 	}
@@ -43,6 +53,13 @@ public class TaskDTO {
 	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
+	public String getTecnicoId() {
+		return tecnicoId;
+	}
+	public void setTecnicoId(String tecnicoId) {
+		this.tecnicoId = tecnicoId;
+	}
+	
 	
     
 

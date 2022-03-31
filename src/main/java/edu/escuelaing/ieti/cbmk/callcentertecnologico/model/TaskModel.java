@@ -11,15 +11,30 @@ import org.springframework.data.mongodb.core.mapping.Document;
 	    @Id
 	    private String id;
 	    private String iduser;
+	    private String tecnicoId;
 	    private String email;
 	    private String comentario;
 	    private Date fechaCreacion;
+	    private String skill;
 	    
 		public String getId() {
 			return id;
 		}
 		public void setId(String id) {
 			this.id = id;
+		}
+		
+		public String getTecnicoId() {
+			return tecnicoId;
+		}
+		public void setTecnicoId(String tecnicoId) {
+			this.tecnicoId = tecnicoId;
+		}
+		public String getSkill() {
+			return skill;
+		}
+		public void setSkill(String skill) {
+			this.skill = skill;
 		}
 		public String getIduser() {
 			return iduser;
