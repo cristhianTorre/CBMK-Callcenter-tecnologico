@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +28,30 @@ public class CreateTaskController {
     public ResponseEntity<?> createTask( @RequestBody TaskDTO taskdto){
         try {
             return new ResponseEntity<>(taskservice.createTask(ObjectMapperUtils.map(taskdto, TaskModel.class)), HttpStatus.OK);
+        }
+        catch (Exception e){
+            return new ResponseEntity<>(false, HttpStatus.OK);
+        }
+
+
+    }
+	
+	@GetMapping(value = "/task")
+    public ResponseEntity<?> tasks(){
+        try {
+            return new ResponseEntity<>(taskservice.AllTask(), HttpStatus.OK);
+        }
+        catch (Exception e){
+            return new ResponseEntity<>(false, HttpStatus.OK);
+        }
+
+
+    }
+	
+	@GetMapping(value = "/task/{id}")
+    public ResponseEntity<?> tasksbyId(@PathVariable String id){
+        try {
+            return new ResponseEntity<>(taskservice.TaskbyId(id), HttpStatus.OK);
         }
         catch (Exception e){
             return new ResponseEntity<>(false, HttpStatus.OK);
